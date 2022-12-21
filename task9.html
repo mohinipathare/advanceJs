@@ -1,0 +1,22 @@
+<script>
+    var obj={num:2}
+    var functionName=function(arg1,arg2)
+    {
+        return this.num+arg1+arg2;
+    }
+    console.log(functionName.call(obj,2,3));
+    console.log(functionName.apply(obj,[2,3]));
+    var bound=functionName.bind(obj);
+    console.log(bound(2,3));
+</script>
+<!-- Create a new object called Student with age 20 , 
+write a function which prints the age of the student from the student object. -->
+<!-- <script>
+    var obj={age:20}
+    var printAge=function()
+    {
+        return this.age;
+    }
+    let printMyAge=printAge.bind(obj);
+    console.log(printMyAge());
+</script> -->
